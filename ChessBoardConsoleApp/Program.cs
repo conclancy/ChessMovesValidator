@@ -47,14 +47,44 @@ namespace ChessBoardConsoleApp
         private static Cell setCurrentCell()
         {
             // ask user for x and y coordinate; return cell location
-            Console.WriteLine("Enter the current row number");
-            int currentRow = int.Parse(Console.ReadLine());
+            int currentRow = validateCellInput("row");
+            int currentColumn = validateCellInput("column");
 
-            Console.WriteLine("Enter the current column number");
-            int currentColumn = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the current column number");
+            //int currentColumn = int.Parse(Console.ReadLine());
 
             myBoard.theGrid[currentRow, currentColumn].CurrentlyOccupied = true;
             return myBoard.theGrid[currentRow, currentColumn];
+        }
+
+        private static int validateCellInput(string vector)
+        {  
+            string vectorMessage = String.Format("Enter the current {0} number", vector);
+            int vectorNumber = -1;
+            while (vectorNumber < 0 || vectorNumber >= myBoard.Size)
+            {
+                int number; 
+                string errorMessage = String.Format("Please enter a {0} number between 0 and 7", vector);
+
+                Console.WriteLine(vectorMessage);
+                string input = Console.ReadLine();
+
+                if(!int.TryParse(input, out number))
+                {
+                   vectorMessage = errorMessage;
+                   continue;
+                }
+
+                vectorNumber = Int32.Parse(input);
+
+                if(vectorNumber < 0 || vectorNumber >= myBoard.Size)
+                {
+                    vectorMessage = errorMessage;
+                    continue;
+                }
+
+            }
+            return vectorNumber;
         }
 
         private static void printBoard(Board myBoard)
