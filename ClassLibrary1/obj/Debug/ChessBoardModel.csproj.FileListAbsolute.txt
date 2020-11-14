@@ -1,0 +1,6 @@
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\obj\Debug\ChessBoardModel.csprojAssemblyReference.cache
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\obj\Debug\ChessBoardModel.csproj.CoreCompileInputs.cache
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\concl\source\repos\cSharpChessBoardApp\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
