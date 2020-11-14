@@ -42,6 +42,8 @@ namespace ChessBoardModel
             }
 
             // step 2 - find all legal moves and make the cells "legal"
+            chessPiece = chessPiece.ToLower();
+
             switch (chessPiece)
             {
                 case "knight":
